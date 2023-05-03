@@ -1,4 +1,4 @@
-package guru.qa;
+package lesson;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;

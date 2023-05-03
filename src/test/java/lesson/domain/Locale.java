@@ -1,4 +1,4 @@
-package guru.qa.domain;
+package lesson.domain;
 
 public enum Locale {
     EN, RU
