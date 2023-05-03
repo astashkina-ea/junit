@@ -35,7 +35,7 @@ public class RatingWebsiteTests extends TestBase {
                         .verifySecondTitle(secondTitle);
     }
 
-    @CsvFileSource(resources = "/rate.csv")
+    @CsvFileSource(resources = "/homework/rate.csv")
     @ParameterizedTest(name = "При выборе оценки {0} отображается заголовок {1}")
     @Tags({
             @Tag("MEDIUM"),

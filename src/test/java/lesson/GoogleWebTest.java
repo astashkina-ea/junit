@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -24,18 +25,18 @@ public class GoogleWebTest {
     }
 
     //дата провайдер
-    @CsvSource(value = {
-            "selenide | https://selenide.org",
-            "JUnit | https://junit.org"
-    },
-            delimiter = '|')
 //    @CsvSource(value = {
-//            "selenide, https://selenide.org",
-//            "JUnit, https://junit.org"
+//            "selenide | https://ru.selenide.org",
+//            "JUnit | https://junit.org"
 //    },
-
-    // OR
-//  @CsvFileSource(resources = "/successfulSearchTest.csv", delimiter = '|')
+//            delimiter = '|')
+////    @CsvSource(value = {
+////            "selenide, https://selenide.org",
+////            "JUnit, https://junit.org"
+////    },
+//
+//    // OR
+    @CsvFileSource(resources = "/lesson/successfulSearchTest.csv", delimiter = '|')
     @ParameterizedTest(name = "Для поискового запроса: {0} в выдаче присутствует url: {1}")
     @Tags({
             @Tag("BLOCKER"),
