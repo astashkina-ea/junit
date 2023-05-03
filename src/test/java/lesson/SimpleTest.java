@@ -18,7 +18,5 @@ public class SimpleTest {
     @DisplayName("")
     void simpleTest() {
         Assertions.assertEquals(3, 2 + 1, "Результат дб 3");
-
     }
-
 }

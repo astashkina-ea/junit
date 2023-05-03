@@ -2,7 +2,6 @@ package lesson;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -25,7 +24,6 @@ public class SelenideWebTest {
     void setup() {
         Configuration.pageLoadStrategy = "eager";
         open("https://ru.selenide.org/");
-
     }
 
     static Stream<Arguments> selenideLocaleTestDataProvider() { //должен называться как тест, но если не хотим дублировать, то в анатации @MethodSource в ("") указывается название дата провайдера
